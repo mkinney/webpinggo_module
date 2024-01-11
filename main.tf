@@ -14,7 +14,7 @@ provider "docker" {
 
 # Pulls the image
 resource "docker_image" "webpinggo" {
-  name = "mkinney/webpinggo:latest"
+  name = "mkinney/webpinggo:${var.docker_image_version}"
 }
 
 # Create a container
