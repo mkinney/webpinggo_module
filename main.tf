@@ -20,7 +20,7 @@ resource "docker_image" "webpinggo" {
 # Create a container
 resource "docker_container" "wpg" {
   image = docker_image.webpinggo.image_id
-  name  = "wpg"
+  name  = "wpg-${var.external_port}"
   ports {
     internal = "8000"
     external = var.external_port
