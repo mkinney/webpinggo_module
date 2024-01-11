@@ -1,4 +1,5 @@
 terraform {
+  required_version = ">= 1.0"
   required_providers {
     docker = {
       source  = "kreuzwerker/docker"
@@ -22,6 +23,6 @@ resource "docker_container" "wpg" {
   name  = "wpg"
   ports {
     internal = "8000"
-    external = "8000"
+    external = var.external_port
   }
 }
