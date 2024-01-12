@@ -6,6 +6,7 @@ fmt:
 	terraform fmt
 
 up:
+	terraform init
 	terraform plan
 	terraform apply
 
